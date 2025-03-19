@@ -19,12 +19,12 @@ This repository contains a Python script `Requesting.py` that interacts with a l
 
 2. Install the required Python package:
     ```sh
-    pip install ollama
+    pip install -r requirements.txt
     ```
 
 ## Usage
 
-1. Ensure the Ollama server is running. The script will attempt to start the server if it is not already running.
+1. Ensure the Ollama server is running (run `ollama` in your command line and you should see the help text about how to use it). The script will attempt to start the server if it is not already running.
 
 2. Run the script with a prompt:
     ```sh
@@ -53,6 +53,11 @@ if __name__ == "__main__":
         print("\nModel Response:")
         print(response)
 ```
+
+## Troubleshooting
+
+If you get a ModuleNotFoundError it means that your environment cannot resolve the ollama component of the code. Make sure to install the Ollama client from [ollama.com](https://ollama.com) and have it running on your device before running this code.
+Also, try running Ollama on your command line before running Requesting.py.
 
 ## Extending the Script
 
